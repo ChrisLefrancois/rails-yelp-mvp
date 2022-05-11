@@ -11,9 +11,10 @@
 
 <%= link_to 'Back to all restaurant', restaurants_path %>
 
+<%= link_to 'Review that restaurant', new_restaurant_review_path(@restaurant) %>
 
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item"><%= review.content %></li>
+    <li class="list-group-item"><%= review.content %> ||  rating: <%= review.rating %>/5</li>
   <% end %>
 </ul>
